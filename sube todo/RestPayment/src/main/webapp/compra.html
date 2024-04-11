@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Realizar Compra</title>
+</head>
+<body>
+    <h1>Compra del Producto</h1>
+    <p>Producto: <span id="product_name"></span></p>
+    <p>Precio: $1000</p>
+    <form id="purchaseForm" method="post" action="/resources/payment">
+        <input type="hidden" id="productInput" name="productInput">
+        <button type="submit">Comprar</button>
+    </form>
+
+    <script>
+        // Obtener el nombre del producto de la URL
+        var urlParams = new URLSearchParams(window.location.search);
+        var productName = urlParams.get('product');
+
+        // Actualizar el nombre del producto en el formulario
+        document.getElementById("product_name").innerText = productName;
+        document.getElementById("productInput").value = productName;
+    </script>
+</body>
+</html>

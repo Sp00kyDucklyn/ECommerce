@@ -1,0 +1,5 @@
+com\mycompany\restpucharse\resources\JakartaEE91Resource.class
+com\mycompany\restpucharse\PucharseResource.class
+com\mycompany\restpucharse\JakartaRestConfiguration.class
+ws\Compras.class
+rabbit\notificaciones.class
