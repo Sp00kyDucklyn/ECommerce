@@ -1,0 +1,3 @@
+com\mycompany\restpayment\resources\JakartaEE91Resource.class
+com\mycompany\restpayment\JakartaRestConfiguration.class
+com\mycompany\restpayment\PaymentResource.class
