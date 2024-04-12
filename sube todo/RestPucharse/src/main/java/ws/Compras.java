@@ -25,7 +25,7 @@ public class Compras {
 
     private WebTarget webTarget;
     private Client client;
-    private static final String BASE_URI = "http://localhost:8080/RestPayment/resources";
+    private static final String BASE_URI = "http://localhost:8081/RestPayment/resources";
 
     public Compras() {
         client = jakarta.ws.rs.client.ClientBuilder.newClient();

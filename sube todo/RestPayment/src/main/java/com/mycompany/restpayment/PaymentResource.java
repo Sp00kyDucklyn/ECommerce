@@ -47,7 +47,7 @@ public class PaymentResource {
                                 .replacePath("/RestPayment/compra.html") // Reemplazar la ruta a compra.html
                                 .build()
                                 .toString();
-        
+        System.out.println("qp");
         // Redirigir al usuario a compra.html con el producto seleccionado
         return Response.seeOther(UriBuilder.fromUri(baseUri)
                 .queryParam("product", productName)

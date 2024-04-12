@@ -29,12 +29,15 @@ public class PucharseResource {
 
     @Context
     private UriInfo context;
+    
+    private notificaciones noti;
 
     
     /**
      * Creates a new instance of PucharseResource
      */
     public PucharseResource() {
+       
     }
 
     /**
@@ -54,18 +57,20 @@ public class PucharseResource {
     @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.TEXT_PLAIN)
     public Response enviarCompra(String compra) {
+        
         compra=compra.strip();
         String[] parts = compra.split("=");
         String purchaseInput = "";
         if (parts.length == 2) {
             purchaseInput = parts[1];
         }
-        notificaciones noti = new notificaciones();
+        noti = new notificaciones();
         noti.enviarNotificacionComprar(purchaseInput);
         Compras n= new Compras();
         Response response = n.redirectToPurchasePage(Response.class,purchaseInput);
 
         // Retornar la respuesta recibida del otro recurso
+        System.out.println(response);
         return response;
        
          
